@@ -93,7 +93,7 @@ ordenados de menor a mayor y sus tamaños, y luego fusione estos dos
 arreglos en un tercer arreglo también ordenado de menor a mayor.
 */
 void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2, int result[]) {
-  int index1 = 0;
+  /*int index1 = 0;
   int index2 = 0;
   int arrNuevo[size1 + size2];
   int indexNuevo = 0;
@@ -114,7 +114,7 @@ void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2, int result[
       indexNuevo++;
     }
   }
-  result = arrNuevo;
+  result = arrNuevo;*/
 } 
 
 /*
