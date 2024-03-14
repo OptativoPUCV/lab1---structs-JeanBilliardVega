@@ -79,3 +79,17 @@ exercises.c:78:10: error: ‘arregloNuevo’ may be used uninitialized in this f
 cc1: all warnings being treated as errors
 Compilation failed
 398f0c2
+Thu 14 Mar 2024 08:58:47 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:78:10: error: returning ‘int’ from a function with return type ‘int *’ makes pointer from integer without a cast [-Werror=int-conversion]
+   78 |   return *arregloNuevo;
+      |          ^~~~~~~~~~~~~
+exercises.c:78:10: error: ‘arregloNuevo’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+   78 |   return *arregloNuevo;
+      |          ^~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+75965e6
