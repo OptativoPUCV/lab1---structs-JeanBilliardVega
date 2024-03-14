@@ -65,16 +65,17 @@ newsize apunta a una dirección válida que no ha sido inicializada con nigún v
 int *filterEvenNumbers(int arr[], int size, int *newSize) {
   int index;
   int *arregloNuevo;
+  (*newSize) = 0;
   for(index = 0 ; index < size; index++)
   {
     if(arr[index] % 2 == 0)
     {
-      *arregloNuevo = realloc(arregloNuevo, sizeof(int) * ((*newSize) + 1));
+      arregloNuevo = realloc(arregloNuevo, sizeof(int) * ((*newSize) + 1));
       arregloNuevo[(*newSize)] = arr[index];
       (*newSize)++;
     }
   }
-  return NULL;
+  return arregloNuevo;
 }
 /*
 Ejercicio 4: Fusión de dos Arreglos Ordenados

@@ -68,3 +68,14 @@ exercises.c:72:23: error: ‘arregloNuevo’ may be used uninitialized [-Werror=
 cc1: all warnings being treated as errors
 Compilation failed
 2ad676d
+Thu 14 Mar 2024 08:58:37 PM UTC: 
+ exercises.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:78:10: error: ‘arregloNuevo’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+   78 |   return arregloNuevo;
+      |          ^~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+398f0c2
