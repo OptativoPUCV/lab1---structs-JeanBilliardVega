@@ -54,3 +54,17 @@ exercises.c:72:22: error: ‘arregloNuevo’ may be used uninitialized in this f
 cc1: all warnings being treated as errors
 Compilation failed
 cfcf4e3
+Thu 14 Mar 2024 08:55:50 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:72:21: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   72 |       *arregloNuevo = realloc(arregloNuevo, sizeof(int) * ((*newSize) + 1));
+      |                     ^
+exercises.c:72:23: error: ‘arregloNuevo’ may be used uninitialized [-Werror=maybe-uninitialized]
+   72 |       *arregloNuevo = realloc(arregloNuevo, sizeof(int) * ((*newSize) + 1));
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+2ad676d
