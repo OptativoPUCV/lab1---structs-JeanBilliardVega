@@ -39,7 +39,7 @@ void reverseArray(int arr[], int size)
         indexOrg--;
       }
   }
-  return 
+  return arrNew;
 }
 
 /*
