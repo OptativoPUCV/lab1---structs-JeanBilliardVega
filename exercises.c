@@ -64,18 +64,20 @@ newsize apunta a una dirección válida que no ha sido inicializada con nigún v
 */
 int *filterEvenNumbers(int arr[], int size, int *newSize) {
   int index;
+  /*
   int cont = 0;
   for(index = 0 ; index < size; index++)
   {
     if(arr[index] % 2 == 0)
       cont++;
   }
-  int *arregloNuevo = malloc(cont * sizeof(int));
+  int *arregloNuevo = malloc(cont * sizeof(int));*/
+  int *arregloNuevo;
   for(index = 0 ; index < size; index++)
   {
     if(arr[index] % 2 == 0)
     {
-      arregloNuevo = realloc(arregloNuevo, ((*newSize) + 1) * sizeof(int));
+      arregloNuevo = realloc(arregloNuevo,  sizeof(int));
       arregloNuevo[(*newSize)] = arr[index];
       (*newSize)++;
     }

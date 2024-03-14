@@ -120,3 +120,14 @@ Thu 14 Mar 2024 09:05:22 PM UTC:
  tests:  0|5
 total_score: 20/70
 6f75c0e
+Thu 14 Mar 2024 09:09:45 PM UTC: 
+ exercises.c | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:85:10: error: ‘arregloNuevo’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+   85 |   return arregloNuevo;
+      |          ^~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+fdb025c
