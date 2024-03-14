@@ -75,7 +75,7 @@ int *filterEvenNumbers(int arr[], int size, int *newSize) {
   {
     if(arr[index] % 2 == 0)
     {
-      arregloNuevo = realloc(arregloNuevo, (*newSize) + 1 * sizeof(int));
+      arregloNuevo = realloc(arregloNuevo, ((*newSize) + 1) * sizeof(int));
       arregloNuevo[(*newSize)] = arr[index];
       (*newSize)++;
     }
