@@ -32,3 +32,14 @@ exercises.c:70:54: error: invalid operands to binary * (have ‘long unsigned in
       |                                                                 int *
 Compilation failed
 507ba2b
+Thu 14 Mar 2024 08:54:39 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:70:20: error: ‘arregloNuevo’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+   70 |     arregloNuevo = realloc(arregloNuevo, sizeof(int) * ((*newSize) + 1));
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+7254a7c
