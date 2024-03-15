@@ -268,3 +268,9 @@ Fri 15 Mar 2024 01:18:17 PM UTC:
  tests:  0|2
 total_score: 50/70
 22ca29f
+Fri 15 Mar 2024 01:22:57 PM UTC: 
+ exercises.c | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+ tests:  0|1
+total_score: 60/70
+475174b
