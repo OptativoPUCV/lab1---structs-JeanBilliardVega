@@ -9,29 +9,25 @@ Ejercicio 1: Encuentra el Elemento Mayor
 Descripción: Escribe una función que tome un arreglo de enteros
 y su tamaño, y devuelva el valor más grande del arreglo.
 */
-int findMax(int arr[], int size) { 
+int findMax(int arr[], int size) {
   int index = 0;
   int max = -2147483648;
-  while(index < size)
-  {
-    if(arr[index] > max)
-    {
+  while (index < size) {
+    if (arr[index] > max) {
       max = arr[index];
-    } 
+    }
     index++;
   }
-   return max;
+  return max;
 }
 /*
 Ejercicio 2: Invertir un Arreglo
 Descripción: Escribe una función que tome un arreglo y su tamaño, y luego
 invierta el orden de sus elementos.
 */
-void reverseArray(int arr[], int size)
-{
+void reverseArray(int arr[], int size) {
   int aux;
-  for(int i = 0 ; i < size; i++)
-  {
+  for (int i = 0; i < size; i++) {
     aux = arr[i];
     arr[i] = arr[size - 1];
     arr[size - 1] = aux;
@@ -50,7 +46,7 @@ void reverseArray(int arr[], int size)
       indexOrg--;
     }
   }
-  arr = arrNew; 
+  arr = arrNew;
   */
 }
 
@@ -59,8 +55,9 @@ Ejercicio 3: Filtrar Números Pares
 Descripción: Escribe una función que tome un arreglo de enteros
 y su tamaño, y luego devuelva un nuevo arreglo que contenga solo
 los números pares del arreglo original.
-newsize apunta a una dirección válida que no ha sido inicializada con nigún valor específico. 
-*newsize debe almacenar el tamaño del nuevo arreglo que se retorna.
+newsize apunta a una dirección válida que no ha sido inicializada con nigún
+valor específico. *newsize debe almacenar el tamaño del nuevo arreglo que se
+retorna.
 */
 /*
 int cont = 0;
@@ -92,19 +89,19 @@ int *arregloNuevo = malloc(cont * sizeof(int));*/
   return arregloNuevo;
 }*/
 
-int* filterEvenNumbers(int arr[], int size, int *newSize) {
+int *filterEvenNumbers(int arr[], int size, int *newSize) {
   int count = 0;
   for (int i = 0; i < size; i++) {
     if (arr[i] % 2 == 0) {
-        count++;
+      count++;
     }
   }
-  int *result = (int*)malloc(sizeof(int) * count);
+  int *result = (int *)malloc(sizeof(int) * count);
   if (result == NULL) {
     *newSize = 0;
-    return NULL; // Error: No se pudo asignar memoria
+    return NULL;
   }
-  
+
   int index = 0;
   for (int i = 0; i < size; i++) {
     if (arr[i] % 2 == 0) {
@@ -112,10 +109,8 @@ int* filterEvenNumbers(int arr[], int size, int *newSize) {
     }
   }
   *newSize = count;
-
   return result;
 }
-
 
 /*
 Ejercicio 4: Fusión de dos Arreglos Ordenados
@@ -124,7 +119,7 @@ ordenados de menor a mayor y sus tamaños, y luego fusione estos dos
 arreglos en un tercer arreglo también ordenado de menor a mayor.
 */
 void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2, int result[]) {
-  /*int index1 = 0;
+  int index1 = 0;
   int index2 = 0;
   int arrNuevo[size1 + size2];
   int indexNuevo = 0;
@@ -136,17 +131,19 @@ void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2, int result[
       {
         arrNuevo[indexNuevo] = arr1[index1];
         index1++;
+        break;
       }
       else
       {
         arrNuevo[indexNuevo] = arr2[index2];
         index2++;
+        break
       }
       indexNuevo++;
     }
   }
-  result = arrNuevo;*/
-} 
+  result = arrNuevo;
+}
 
 /*
 Ejercicio 5: Comprobación de Ordenación
