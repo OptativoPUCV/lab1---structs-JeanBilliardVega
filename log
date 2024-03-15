@@ -247,3 +247,18 @@ Fri 15 Mar 2024 01:03:46 PM UTC:
  tests:  0|3
 total_score: 40/70
 cec32fc
+Fri 15 Mar 2024 01:18:00 PM UTC: 
+ exercises.c | 32 +++++++++++++++++++++++++++++++-
+ 1 file changed, 31 insertions(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘checkSorted’:
+exercises.c:176:10: error: ‘orden’ undeclared (first use in this function)
+  176 |   return orden;
+      |          ^~~~~
+exercises.c:176:10: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:150:7: error: unused variable ‘index’ [-Werror=unused-variable]
+  150 |   int index = 0;
+      |       ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+c43f604
