@@ -62,16 +62,16 @@ los números pares del arreglo original.
 newsize apunta a una dirección válida que no ha sido inicializada con nigún valor específico. 
 *newsize debe almacenar el tamaño del nuevo arreglo que se retorna.
 */
+/*
+int cont = 0;
+for(index = 0 ; index < size; index++)
+{
+  if(arr[index] % 2 == 0)
+    cont++;
+}
+int *arregloNuevo = malloc(cont * sizeof(int));*/
+
 int *filterEvenNumbers(int arr[], int size, int *newSize) {
-  
-  /*
-  int cont = 0;
-  for(index = 0 ; index < size; index++)
-  {
-    if(arr[index] % 2 == 0)
-      cont++;
-  }
-  int *arregloNuevo = malloc(cont * sizeof(int));*/
   int index;
   (*newSize) = 0;
   int *arregloNuevo = NULL;
@@ -80,6 +80,11 @@ int *filterEvenNumbers(int arr[], int size, int *newSize) {
     if(arr[index] % 2 == 0)
     {
       arregloNuevo = realloc(arregloNuevo, sizeof(int) * ((*newSize) + 1));
+      if arregloNuevo = NULL;
+      {
+        free(arregloNuevo);
+        return NULL;
+      }
       arregloNuevo[(*newSize)] = arr[index];
       (*newSize) += 1;
     }
