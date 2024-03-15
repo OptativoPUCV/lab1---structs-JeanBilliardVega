@@ -202,3 +202,14 @@ exercises.c:84:7: note: ...this statement, but the latter is misleadingly indent
 cc1: all warnings being treated as errors
 Compilation failed
 01af0a9
+Fri 15 Mar 2024 12:40:24 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:83:11: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+   83 |       if (arregloNuevo = NULL)
+      |           ^~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+4da8b8d
