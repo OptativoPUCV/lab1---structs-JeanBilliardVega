@@ -274,3 +274,20 @@ Fri 15 Mar 2024 01:22:57 PM UTC:
  tests:  0|1
 total_score: 60/70
 475174b
+Fri 15 Mar 2024 01:43:17 PM UTC: 
+ exercises.c | 17 ++++++++++++++++-
+ 1 file changed, 16 insertions(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘crearListaEnlazada’:
+exercises.c:234:3: error: ‘return’ with no value, in function returning non-void [-Werror=return-type]
+  234 |   return ;
+      |   ^~~~~~
+exercises.c:220:7: note: declared here
+  220 | Nodo *crearListaEnlazada(int arr[], int size)
+      |       ^~~~~~~~~~~~~~~~~~
+exercises.c:223:7: error: unused variable ‘num’ [-Werror=unused-variable]
+  223 |   int num;
+      |       ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+97233f2
