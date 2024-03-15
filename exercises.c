@@ -71,7 +71,7 @@ for(index = 0 ; index < size; index++)
 }
 int *arregloNuevo = malloc(cont * sizeof(int));*/
 
-int *filterEvenNumbers(int arr[], int size, int *newSize) {
+/*int *filterEvenNumbers(int arr[], int size, int *newSize) {
   int index;
   (*newSize) = 0;
   int *arregloNuevo = NULL;
@@ -90,7 +90,33 @@ int *filterEvenNumbers(int arr[], int size, int *newSize) {
     }
   }
   return arregloNuevo;
+}*/
+
+int* filterEvenNumbers(int arr[], int size, int *newSize) {
+  int count = 0;
+  for (int i = 0; i < size; i++) {
+    if (arr[i] % 2 == 0) {
+        count++;
+    }
+  }
+  int *result = (int*)malloc(sizeof(int) * count);
+  if (result == NULL) {
+    *newSize = 0;
+    return NULL; // Error: No se pudo asignar memoria
+  }
+  
+  int index = 0;
+  for (int i = 0; i < size; i++) {
+    if (arr[i] % 2 == 0) {
+      result[index++] = arr[i];
+    }
+  }
+  *newSize = count;
+
+  return result;
 }
+
+
 /*
 Ejercicio 4: Fusión de dos Arreglos Ordenados
 Descripción: Escribe una función que tome dos arreglos
